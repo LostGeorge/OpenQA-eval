@@ -20,24 +20,34 @@ logger = logging.getLogger("eval")
 
 
 def gpt_eval(question: Question, candidate_answer: str, openai_proxy: OpenAIProxy) -> Tuple[int, str]:
-    answers = " or ".join(question.answers)
+    # answers = " or ".join(question.answers)
     q = question.text
 
     if not q.endswith("?"):
         q += "?"
 
-    prompt = f"Question: {q}\nAnswer: {answers}\nCandidate: {candidate_answer}\n\nIs candidate correct?"
+    prompt = f"Question: {q}\n"
+    for i, answer in enumerate(question.answers):
+        prompt += f"Valid Answer {i+1}: {answer}\n"
+    prompt += f"Candidate: {candidate_answer}\n\n"
+    prompt += "How well does the candidate match any of the valid answers on a scale from 1 to 5? Be strict in scoring."
     response = openai_proxy(prompt)
-    if response.lower().startswith("yes"):
-        acceptable = "Yes"
-    elif response.lower().startswith("no"):
-        acceptable = "No"
+    if "1" in response:
+        response_num = 1
+    elif "2" in response:
+        response_num = 2
+    elif "3" in response:
+        response_num = 3
+    elif "4" in response:
+        response_num = 4
+    elif "5" in response:
+        response_num = 5
     else:
-        acceptable = ""
+        response_num = 0
         logger.warning(f"Invalid response to `{q}` & `{candidate_answer}`: {response}")
         logger.warning(f"Prompt: {prompt}")
 
-    return int(acceptable == "Yes"), response
+    return response_num, response
 
 
 def em_eval(question: Question, candidate_answer: str, match: str = "string") -> int:

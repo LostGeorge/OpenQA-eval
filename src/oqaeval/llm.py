@@ -28,7 +28,7 @@ class OpenAIProxy:
         self.sleep_time = sleep_time
 
         assert "OPENAI_API_KEY" in os.environ
-        openai.api_key = os.environ["SEMIR_OPENAI_KEY"]
+        openai.api_key = os.environ["OPENAI_API_KEY"]
 
         self.call_times = []
         self.num_errors = 0
