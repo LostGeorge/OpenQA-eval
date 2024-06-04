@@ -30,18 +30,15 @@ def gpt_eval(question: Question, candidate_answer: str, openai_proxy: OpenAIProx
     for i, answer in enumerate(question.answers):
         prompt += f"Valid Answer {i+1}: {answer}\n"
     prompt += f"Candidate: {candidate_answer}\n\n"
-    prompt += "How well does the candidate match any of the valid answers on a scale from 1 to 5? Be strict in scoring."
+    prompt += "How well does the candidate match any of the valid answers on a scale from 1 to 10? "
+    prompt += "Score on both content and tone, and please grade strictly. "
+    prompt += "Format the response to have just the score on the first line."
     response = openai_proxy(prompt)
-    if "1" in response:
-        response_num = 1
-    elif "2" in response:
-        response_num = 2
-    elif "3" in response:
-        response_num = 3
-    elif "4" in response:
-        response_num = 4
-    elif "5" in response:
-        response_num = 5
+    response_first_line = response.split('\n')[0]
+    for i in range(1, 11):
+        if str(i) in response_first_line:
+            response_num = i
+            break
     else:
         response_num = 0
         logger.warning(f"Invalid response to `{q}` & `{candidate_answer}`: {response}")
