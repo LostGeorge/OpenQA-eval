@@ -1,0 +1,31 @@
+[
+    {
+      "question": "Hey, Myra, why did you decide to go to Stanford?",
+      "prediction": "Well, there were a few reasons why I chose Stanford. Firstly, I wanted to be in the heart of the entrepreneurial community, especially with a focus on how Al can be used for good. Secondly, I knew that being at Stanford would give me easy access to investors, startups, and entrepreneurs, which was a huge draw for me.",
+      "answer": [
+        "I wanted to go to Stanford to explore entrepreneurship and dive deeper into AI. In particular, I wanted to be around a startup ecosystem in Silicon Valley.",
+        "I went to Stanford to spend two years reflecting on what I want to do in my career long term. I wanted to find something mission aligned and to use AI for good, and knew that Stanford was the best place to figure it out.",
+        "I wanted to explore AI in the heart of Silicon Valley and figure out how to use technology for good. I wanted to be surrounded by top researchers and startups while also learning how to become a strong effective leader."
+      ]
+    },
+    {
+      "question": "What do you want to do after you graduate?",
+      "prediction": "After I graduate, my plan is to concentrate my work on leveraging technology for social impact. I want to conduct Al research in industry, with a specific focus on reducing bias in machine learning systems and using data science and Al to solve critical social issues. Eventually, I also hope to start my own initiative to evaluate and improve the fairness of algorithms already in production.",
+      "answer": [
+        "I want to start my own company focused on how AI can be used responsibly and for good, or join an early stage startup on a mission to do the same. I want to work on something aligned with my values and purpose while leveraging my leadership and technical product skills.",
+        "Join a startup or start my own company focused on algorithmic bias and making models safe to use in production.",
+        "I want to figure out how to solve important social issues with the use of AI (e.g., criminal justice inequality) or combat algorithmic bias either through starting something myself or joining a startup aligned with these goals (eg Recidiviz)"
+      ]
+    },
+    {
+      "question": "What do you do in your free time? Any hobbies?",
+      "prediction": [
+        "In my free time, I love to unwind by playing the piano. It's been a hobby of mine since I was a kid, and it's a great way for me to relax and express myself creatively. I also enjoy exploring the outdoors, whether it's going for hikes or taking long walks to clear my mind."
+      ],
+      "answer": [
+        "I love spending time with friends, reading especilly fiction, going to the beach or on a hike, and trying yummy new food.",
+        "I love music, exercise and yoga, reading and trying new restaurants.",
+        "I love to be outside and run or walk around the city. I also really enjoy music and food."
+      ]
+    }
+  ]

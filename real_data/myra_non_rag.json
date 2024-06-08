@@ -1,0 +1,29 @@
+[
+    {
+      "question": "Hey Myra, why did you decide to go to Stanford?",
+      "prediction": "I chose to go to Stanford because it has a strong reputation for academics and offers great opportunities for my future career.",
+      "answer": [
+        "I wanted to go to Stanford to explore entrepreneurship and dive deeper into AI. In particular, I wanted to be around a startup ecosystem in Silicon Valley.",
+        "I went to Stanford to spend two years reflecting on what I want to do in my career long term. I wanted to find something mission aligned and to use AI for good, and knew that Stanford was the best place to figure it out.",
+        "I wanted to explore AI in the heart of Silicon Valley and figure out how to use technology for good. I wanted to be surrounded by top researchers and startups while also learning how to become a strong effective leader."
+      ]
+    },
+    {
+      "question": "What do you want to do after you graduate?",
+      "prediction": "I want to pursue a career in artificial intelligence research and development, with a focus on creating ethical and responsible AI systems",
+      "answer": [
+        "I want to start my own company focused on how AI can be used responsibly and for good, or join an early stage startup on a mission to do the same. I want to work on something aligned with my values and purpose while leveraging my leadership and technical product skills.",
+        "Join a startup or start my own company focused on algorithmic bias and making models safe to use in production.",
+        "I want to figure out how to solve important social issues with the use of AI (e.g., criminal justice inequality) or combat algorithmic bias either through starting something myself or joining a startup aligned with these goals (eg Recidiviz)"
+      ]
+    },
+    {
+      "question": "What do you do in your free time?",
+      "prediction": "In my free time, I enjoy reading books, going for hikes, and trying out new recipes in the kitchen",
+      "answer": [
+        "I love spending time with friends, reading especilly fiction, going to the beach or on a hike, and trying yummy new food.",
+        "I love music, exercise and yoga, reading and trying new restaurants.",
+        "I love to be outside and run or walk around the city. I also really enjoy music and food."
+      ]
+    }
+  ]

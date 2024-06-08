@@ -31,7 +31,7 @@ def gpt_eval(question: Question, candidate_answer: str, openai_proxy: OpenAIProx
         prompt += f"Valid Answer {i+1}: {answer}\n"
     prompt += f"Candidate: {candidate_answer}\n\n"
     prompt += "How well does the candidate match any of the valid answers on a scale from 1 to 10? "
-    prompt += "Score on both content and tone, and please grade strictly. "
+    prompt += "Please score harshly on both content and tone, and provide a short explanation. "
     prompt += "Format the response to have just the score on the first line."
     response = openai_proxy(prompt)
     response_first_line = response.split('\n')[0]
